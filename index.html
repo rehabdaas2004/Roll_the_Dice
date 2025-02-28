@@ -13,7 +13,7 @@
     <script>
         async function rollDice() {
             try {
-                let response = await fetch("https://roll-the-dice-apntgkdaflfeejg2.uaenorth.azurewebsites.net/roll-dice");
+                let response = await fetch("https://roll-the-dice-aphtgkdfaffeejg2.uaenorth-01.azurewebsites.net/");
                 let data = await response.json();
                 document.getElementById("result").innerText = "Dice Result: " + data.result;
             } catch (error) {
