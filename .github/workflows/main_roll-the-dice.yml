@@ -61,4 +61,4 @@ jobs:
           app-name: 'Roll-the-Dice'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_7F9C943C6F6544FCB10EEEA994E674CE }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1C0CC54347F64FB1AD5BE44784E83CDD }}
