@@ -6,21 +6,21 @@
     <title>Dice Roller</title>
 </head>
 <body>
-   <h2>Click the button to roll the dice</h2>
-   <button onclick="rollDice()">Roll Dice</button>
-   <p id="result"></p>
+    <h2>Click the button to roll the dice</h2>
+    <button onclick="rollDice()">Roll Dice</button>
+    <p id="result"></p>
 
-   <script>
-       async function rollDice() {
-           try {
-               let response = await fetch("http://localhost:3000/roll-dice");
-               let data = await response.json();
-               document.getElementById("result").innerText = "Dice Result: " + data.result;
-           } catch (error) {
-               console.error("Error fetching dice roll:", error);
-               document.getElementById("result").innerText = "Error fetching dice roll.";
-           }
-       }
-   </script>
+    <script>
+        async function rollDice() {
+            try {
+                let response = await fetch("https://roll-the-dice-apntgkdaflfeejg2.uaenorth.azurewebsites.net/roll-dice");
+                let data = await response.json();
+                document.getElementById("result").innerText = "Dice Result: " + data.result;
+            } catch (error) {
+                console.error("Error fetching dice roll:", error);
+                document.getElementById("result").innerText = "Error fetching dice roll.";
+            }
+        }
+    </script>
 </body>
 </html>
