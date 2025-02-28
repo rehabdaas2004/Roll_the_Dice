@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+</head>
+<body>
+   <h2>Click the button to roll the dice</h2>
+   <button onclick="rollDice()">Roll Dice</button>
+   <p id="result"></p>
+
+   <script>
+       async function rollDice() {
+           try {
+               let response = await fetch("http://localhost:3000/roll-dice");
+               let data = await response.json();
+               document.getElementById("result").innerText = "Dice Result: " + data.result;
+           } catch (error) {
+               console.error("Error fetching dice roll:", error);
+               document.getElementById("result").innerText = "Error fetching dice roll.";
+           }
+       }
+   </script>
+</body>
+</html>
